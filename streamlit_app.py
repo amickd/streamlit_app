@@ -3,6 +3,8 @@ import streamlit
 import requests
 import snowflake.connector
 
+
+
 streamlit.title("My Parents Diner")
 streamlit.header('🥣 Breakfast Menu')
 streamlit.text('🥗 Omega 3 & Blueberry Oatmeal')
@@ -30,3 +32,5 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #write table to the UI
 streamlit.dataframe(fruityvice_normalized)
+
+
